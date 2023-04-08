@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-euiv="X-US-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial0scale=1.0">
+  <title>Website With Login & Registration </title>
+  <link rel="stylesheet" href="/css/style.css">
+  <!--<link rel="stylesheet" href="/css/newstyle.css">-->
+</head>
+
+<body>
+
+  <header>
+    <h2 class="logo"> Logo</h2>
+    <nav class="navigation">
+      <a href="newhome.html"> Home </a>
+      <a href="newabout.html"> About </a>
+      <a href="newdiscover.html"> Discover </a>
+      <a href="newflights.html"> Flights </a>
+
+      <a href="LoginScreen.html"> Login </a>
+
+    </nav>
+
+  </header>
+
+  <div id="output_div"></div>
+
+  <!---<p>Name of restaurant: <span id="restaurant"></span></p>-->
+  <script>
+
+    console.log('about to fetch data');
+
+
+    async function catchData() {
+      const options = {
+        method: 'GET',
+        headers: {
+          'X-RapidAPI-Key': '1fad265bc2msh7957780be0013bep140550jsn939508d730d6',
+          'X-RapidAPI-Host': 'tripadvisor16.p.rapidapi.com'
+        }
+      };
+
+      const response = await fetch('https://tripadvisor16.p.rapidapi.com/api/v1/restaurant/searchLocation?query=mumbai', options);
+      const answer = await response.json();
+
+      var outputHTML = "";
+      for (var i = 0; i < answer.data.length; i++) {
+        outputHTML += answer.data[i].name + "<br>"; // Append a line break after each restaurant name
+      }
+      document.getElementById("output_div").innerHTML = outputHTML;
+    }
+
+
+    catchData()
+      .then(response => {
+        console.log('did it!');
+      })
+      .catch(error => {
+        console.log('error!');
+        console.error(error);
+      })
+
+  </script>
+
+
+
+  <script src="/frontend js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

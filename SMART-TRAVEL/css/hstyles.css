@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Alice", sans-serif;
+  }
+  
+  body {
+    font-family: "Alice", sans-serif;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Headings */
+  header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.navigation a {
+  position: relative;
+  font-size: 1.1em;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navigation a::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform .2s;
+
+}
+
+.navigation a:hover::after{
+  transform: scaleX(1);
+}
+
+
+.navigation .btnLogin-popup{
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: white;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: .1s;
+}
+
+.navigation .btnLogin-popup:hover{
+  background-color: white;
+  color: black;
+}
+
+  .big-heading {
+    margin-top: 5%;
+    margin-left: 4%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 150%;
+    line-height: 1.5;
+    font-weight: 900;
+    letter-spacing: .3rem;
+  }
+  
+  .section-heading {
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+  
+  /* Containers */
+  
+  .container-fluid {
+    padding: 7% 15%;
+  }
+  
+  /* Sections */
+  
+
+  
+  
+  /* Navigation Bar */
+  
+  .navbar {
+    padding: 0 0 4.5rem;
+  }
+  
+  .navbar-brand {
+    font-family: "Alice";
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-item {
+    padding: 0 18px;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+    font-family: 'Montserrat-Light';
+  }
+  
+  /* Title Section */
+  
+  #title .container-fluid {
+    height: 530px;
+    position: relative;
+    z-index: 1;
+    padding: 3% 10% 15%;
+    text-align: left;
+  }
+  
+  .topnav .search-container {
+    float: left;
+    margin-top: -6%;
+    margin-left: 2%;
+    width: 30rem;
+  }
+  
+  .topnav input[type=text] {
+    padding: 6px;
+    margin-top: -16%;
+    font-size: 17px;
+    border: none;
+    width: 26rem;
+  }
+  
+  .topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: -1.6%;
+    margin-right: 22px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+  
+  /* Download Buttons */
+  
+  .download-button {
+    margin: 5% 3% 5% 0;
+  }
+  
+  /* Title Image */
+  
+  .title-image {
+    position: absolute;
+    width: 1425px;
+    height: 530px;
+    margin-left: -10%;
+    margin-top: -10%;
+    padding-bottom: 4%;
+    z-index: -1;
+  }
+  
+  .title-trans-image {
+    width: 65%;
+    transform: rotate(25deg);
+    position: relative;
+    margin-left: 55%;
+  }
+  
+  /* Features */
+  
+  #features {
+    padding: 1.5rem 0 1.5rem 0;
+    position: relative;
+    z-index: 2;
+  }
+  
+  
+  .feature-title {
+    font-size: 1.5rem;
+  }
+  
+  .icons {
+    color: #317D99;
+    transform: scale(4);
+    margin-bottom: 40px;
+  }
+  
+  .icons:hover {
+    color: #96DED1;
+  }
+  
+  .subtitle {
+    margin-top: 2rem;
+  }
+  
+  .description {
+    width: 15rem;
+    padding-bottom: 3rem;
+  }
+
+  
+  .testimonial-text {
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+  
+  .testimonial-image {
+    width: 10%;
+    border-radius: 100%;
+    margin: 20px;
+    
+  }
+  
+  #press {
+    padding-bottom: 3%;
+  }
+  
+  .press-logo {
+    width: 15%;
+    margin: 20px 20px 50px;
+  }
+  
+  /* Pricing Section */
+  
+
+  
+  .price-text {
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+  
+  .pricing-column {
+    padding: 3% 2%;
+  }
+  
+  
+  @media (max-width: 991px) {
+    #title {
+      padding-bottom: 1200px;
+      text-align: center;
+    }
+  
+    .title-image {
+      width: 300px;
+      margin-left: 20px;
+      position: static;
+      transform: rotate(0);
+    }
+  
+  }
+  
+  /* CTA Section */
+  
+  #cta {
+    padding: 50px 50px 20px;
+  }
+  
+  .cta-message {
+    color: #F9F8F7;
+    font-size: 3rem;
+    position: relative;
+    width: 60%;
+    margin-left: 20%;
+    height: 6rem;
+  }
+  
+  .cta-message2 {
+    color: #F9F8F7;
+    font-size: 3rem;
+    position: relative;
+    width: 60%;
+    margin-left: 18.5%;
+    height: 6rem;
+  }
+  
+  .phone-lady-trans {
+    position: absolute;
+    margin-top: -17%;
+    margin-left: -10%;
+    height: 35rem;
+    width: 40rem;
+  }
+  
+  /* Footer Section */
+  
+  #footer {
+    padding: 100px 300px 15px;
+  }
+  
+  .footer-buttons {
+    margin-bottom: 20px;
+  }
+  
+  .footer-icon {
+    margin: 20px 10px;
+  }
+  
